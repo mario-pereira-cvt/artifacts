@@ -49,6 +49,6 @@ jobs:
         run: |
           ls
       - name: Output file name
-        run: echo "Script file: ${{ steps.build.outputs.script-file }}"
+        run: echo "${{ needs.build.outputs.script-file }}"
       - name: Deploy
         run: echo "Deploying..."
